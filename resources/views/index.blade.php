@@ -15,6 +15,28 @@
             <a href="#">ロゴ</a>
         </div>
     </nav>
-    <h1>トップページ</h1>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
+        <h1 class="display-4 font-weight-nomal">PorkerShark</h1>
+        <p class="lead font-weight-nomar">これからPorkerで周りとの差をつける準備は出来てるか？</p>
+        <a class="btn btn-outline-secondary">ログイン</a>
+        <a class="btn btn-outline-secondary">新規登録</a>
+    </div>
+
+    <div class="intro d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md5 text-center text-white overflow-hidden ">
+            <div class="my-3 py-3">
+                <h2 class="display-5"> ①まずは自分のレンジ（参加手札）を確認してみよう！</h2>
+            </div>
+        </div>
+        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden border">
+            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden ">
+                <h2>②参加率をしっかり確認しよう！</h2>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container py-5 text-center overflow-hidden">フッター情報</footer>
+    
 </body>
 </html>
