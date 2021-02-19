@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','TopController@index')->name('Top');
+
+Route::get('/store','StoreController@store')->name('store');

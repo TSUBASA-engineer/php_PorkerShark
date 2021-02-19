@@ -19,8 +19,8 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
         <h1 class="display-4 font-weight-nomal">PorkerShark</h1>
         <p class="lead font-weight-nomar">これからPorkerで周りとの差をつける準備は出来てるか？</p>
-        <a class="btn btn-outline-secondary">ログイン</a>
-        <a class="btn btn-outline-secondary">新規登録</a>
+        <a class="btn btn-outline-secondary" href="#">ログイン</a>
+        <a class="btn btn-outline-secondary" href="/store">新規登録</a>
     </div>
 
     <div class="intro d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <footer class="container py-5 text-center overflow-hidden">フッター情報</footer>
+    <footer class="container text-center overflow-hidden">©︎2021 TSUBASA.O</footer>
     
 </body>
 </html>

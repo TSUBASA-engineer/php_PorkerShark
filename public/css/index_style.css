@@ -1,4 +1,7 @@
-.site-header {
+.site-header{
     background-color: rgba(0, 0, 0, .85);
 }
 
+.container{
+    width: 100%;
+}
