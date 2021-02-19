@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <footer class="container text-center overflow-hidden">©︎2021 TSUBASA.O</footer>
+    <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
     
 </body>
 </html>

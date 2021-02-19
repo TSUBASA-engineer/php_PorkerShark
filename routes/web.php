@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/','TopController@index')->name('Top');
+Route::GET('/','TopController@index');
 
-Route::get('/store','StoreController@store')->name('store');
+Route::GET('/store','StoreController@store');
+
+Route::POST('/registration','StoreController@registration');
