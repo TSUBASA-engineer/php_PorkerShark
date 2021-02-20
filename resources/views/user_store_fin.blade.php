@@ -12,7 +12,7 @@
 <body>
     <nav class="site-header sticky-top py-1">
         <div class="container d-frex-colm flex-md-row text-center">
-            <a href="#">ロゴ</a>
+            <a href="/"><img  src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
         </div>
     </nav>
 

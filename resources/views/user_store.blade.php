@@ -13,7 +13,7 @@
 
     <nav class="site-header sticky-top py-1">
         <div class="container d-frex-colm flex-md-row text-center">
-            <a href="#">ロゴ</a>
+            <a href="/"><img  src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
         </div>
     </nav>
 
@@ -21,8 +21,8 @@
         @if(session('err_msg')) 
             <p class="text-danger d-flex align-items-center justify-content-center">
             {{session('err_msg')}}
-         @endif
-            </p>   
+            </p>  
+         @endif 
         <form action="{{ url('/registration')}}" method="POST">
         {{ csrf_field() }}
             <div class="form-group">
@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" name="InputPassword1" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control" name="InputPassword" id="exampleInputPassword1" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary" id="btn_check">送信</button>
         </form>

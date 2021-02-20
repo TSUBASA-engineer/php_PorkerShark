@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Validator;
 
 class StoreController extends Controller
 {
@@ -11,21 +12,26 @@ class StoreController extends Controller
         return view('user_store');
     }
 
-    public function email_check($email){
-
-        $user = User::where('email', '=', $email)->first();
-
-        if ($user === null) {
-            return false;
-        } else {
-            return true;
-        }
-    }
 
     public function registration(Request $request){
 
+        
+        $validator = Validator::make($request->all(),[
+
+            'Input_User' => 'required',  
+            'Input_Email' => 'required',               
+            'InputPassword' => 'required',  
+        ]);
+
+        if($validator->fails()){
+            \Session::flash('err_msg','全て入力してください');
+            return redirect('store');
+        }
+
+
+
         $email = $request->Input_Email;
-        $pass  = $request->InputPassword1;
+        $pass  = $request->InputPassword;
         $name  = $request->Input_User;
 
         
@@ -34,6 +40,7 @@ class StoreController extends Controller
             'email'=> $email,
             'password' => $pass
         ];
+
         
         $db_check = $this->email_check($data['email']);
         
@@ -49,4 +56,16 @@ class StoreController extends Controller
 
         }
     }
-}
+
+
+    public function email_check($email){
+
+        $user = User::where('email', '=', $email)->first();
+
+        if ($user === null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+} 
