@@ -11,6 +11,17 @@ class StoreController extends Controller
         return view('user_store');
     }
 
+    public function email_check($email){
+
+        $user = User::where('email', '=', $email)->first();
+
+        if ($user === null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public function registration(Request $request){
 
         $email = $request->Input_Email;
@@ -24,8 +35,18 @@ class StoreController extends Controller
             'password' => $pass
         ];
         
-        User::create($data);
+        $db_check = $this->email_check($data['email']);
+        
+        if ($db_check === true){
 
-        return view('user_store_fin');
+            \Session::flash('err_msg','すでにメールアドレスが登録されています');
+            return view('user_store');
+
+        } else {
+
+            User::create($data);
+            return view('user_store_fin',['data' => $data]);
+
+        }
     }
 }

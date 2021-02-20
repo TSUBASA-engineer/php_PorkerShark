@@ -10,7 +10,20 @@
     <title>登録完了</title>
 </head>
 <body>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-frex-colm flex-md-row text-center">
+            <a href="#">ロゴ</a>
+        </div>
+    </nav>
+
     <h1>登録完了</h1>
-    
+    <div class="check_wrapper">
+        <div class="row">
+            <label class="col-sm-2">名前：</label>
+            <div class="col-sm-10">{{$data['name']}}</div>
+            <label class="col-sm-2">メールアドレス：</label>
+            <div class="col-sm-10">{{$data['email']}}</div>
+        </div>
+    </div>
 </body>
 </html>

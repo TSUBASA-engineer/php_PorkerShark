@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,11 @@
     </nav>
 
     <div class="form_wrapper mx-auto">
+        @if(session('err_msg')) 
+            <p class="text-danger d-flex align-items-center justify-content-center">
+            {{session('err_msg')}}
+         @endif
+            </p>   
         <form action="{{ url('/registration')}}" method="POST">
         {{ csrf_field() }}
             <div class="form-group">
@@ -32,8 +37,18 @@
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" name="InputPassword1" id="exampleInputPassword1" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">送信</button>
+            <button type="submit" class="btn btn-primary" id="btn_check">送信</button>
         </form>
     </div>
+
+<script>
+document.getElementById("btn_check").onclick =　function(){
+    if(window.confirm('登録内容で間違い無いですか？')){
+        return true
+    } else {
+        return false
+    }
+}
+</script>
 </body>
 </html>
