@@ -19,7 +19,7 @@
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
         <h1 class="display-4 font-weight-nomal">PorkerShark</h1>
         <p class="lead font-weight-nomar">これからPorkerで周りとの差をつける準備は出来てるか？</p>
-        <a class="btn btn-outline-secondary" href="#">ログイン</a>
+        <a class="btn btn-outline-secondary" href="/login">ログイン</a>
         <a class="btn btn-outline-secondary" href="/store">新規登録</a>
     </div>
 

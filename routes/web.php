@@ -22,3 +22,7 @@ Route::GET('/','TopController@index');
 Route::GET('/store','StoreController@store');
 
 Route::POST('/registration','StoreController@registration');
+
+Route::GET('/login','LoginController@login');
+
+Route::POST('/input_login','LoginController@input_login');
