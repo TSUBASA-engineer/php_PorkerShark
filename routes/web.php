@@ -26,3 +26,9 @@ Route::POST('/registration','StoreController@registration');
 Route::GET('/login','LoginController@login');
 
 Route::POST('/input_login','LoginController@input_login');
+
+Route::GET('my_page','MyPageController@my_page');
+
+Route::GET('/signout','MyPageController@signout');
+
+Route::GET('/delete','MyPageController@delete');

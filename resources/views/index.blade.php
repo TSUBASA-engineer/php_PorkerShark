@@ -17,6 +17,11 @@
     </nav>
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
+            @if(session('delete_msg')) 
+                <p class="text-danger d-flex align-items-center justify-content-center">
+            {{session('delete_msg')}}
+                </p>  
+            @endif 
         <h1 class="display-4 font-weight-nomal">PorkerShark</h1>
         <p class="lead font-weight-nomar">これからPorkerで周りとの差をつける準備は出来てるか？</p>
         <a class="btn btn-outline-secondary" href="/login">ログイン</a>

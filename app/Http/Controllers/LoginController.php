@@ -32,14 +32,31 @@ class LoginController extends Controller
             'password' => $pass
         ];
 
-        dd($db_check = $this->login_check($data));
+        $db_check = $this->login_check($data);
+
+        if ($db_check === false){
+
+            \Session::flash('err_msg','入力内容が間違っています');
+            return view('login');
+
+        } else {
+
+            session()->put('email', $data['email']);
+
+            $value = User::where('email','=', $data['email'])->get('name');
+            $name = $value[0]['name'];
+
+        
+            return view('mypage',)->with('name',$name);
+
+        }
 
     }
 
     public function login_check($data){
 
-        $user = User::where('email', '=', $data['email'], 'and', 'password', '=', $data['password'])->first();
-
+       $user = User::where('email', $data['email'])->where('password', $data['password'])->first();
+        
         if ($user === null) {
             return false;
         } else {

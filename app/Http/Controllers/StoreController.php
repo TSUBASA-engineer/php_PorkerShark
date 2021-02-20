@@ -50,9 +50,16 @@ class StoreController extends Controller
             return view('user_store');
 
         } else {
-
+            
+            session()->put('email', $data['email']);
+            
             User::create($data);
-            return view('user_store_fin',['data' => $data]);
+
+            $value = User::where('email','=', $data['email'])->get('name');
+            $name = $value[0]['name'];
+            
+
+            return view('mypage')->with('name',$name);
 
         }
     }

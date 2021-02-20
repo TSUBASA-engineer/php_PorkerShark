@@ -35,5 +35,7 @@
             <button type="submit" class="btn btn-primary" id="btn_check">ログイン</button>
         </form>
     </div>
+
+    <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
 </body>
 </html>

@@ -42,6 +42,8 @@
         </form>
     </div>
 
+    <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
+
 <script>
 document.getElementById("btn_check").onclick =　function(){
     if(window.confirm('登録内容で間違い無いですか？')){
