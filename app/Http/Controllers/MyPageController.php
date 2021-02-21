@@ -8,7 +8,8 @@ use App\Models\User;
 class MyPageController extends Controller
 {
     public function my_page(){
-        return view('mypage');
+        $name = \Session::get('name', '失敗');
+        return view('mypage')->with('name',$name);
     }
 
     public function logout(){

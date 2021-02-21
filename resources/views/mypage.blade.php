@@ -16,7 +16,10 @@
                 <button type="submit" class="btn btn-primary" id="btn_delete">アカウント削除</button>
             </form>
             <form action="/" method="GET">
-            <button type="submit" class="btn btn-primary" id="btn_logout">ログアウト</button>
+                <button type="submit" class="btn btn-primary" id="btn_logout">ログアウト</button>
+            </form>
+            <form action="/hand_store" method="GET">
+                <button type="submit" class="btn btn-primary">ハンド登録</button>
             </form>
         </div>
     </nav>

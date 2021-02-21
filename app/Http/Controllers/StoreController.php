@@ -58,6 +58,7 @@ class StoreController extends Controller
             $value = User::where('email','=', $data['email'])->get('name');
             $name = $value[0]['name'];
             
+            \Session::put('name', $name);
 
             return view('mypage')->with('name',$name);
 

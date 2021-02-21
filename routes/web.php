@@ -32,3 +32,5 @@ Route::GET('my_page','MyPageController@my_page');
 Route::GET('/signout','MyPageController@signout');
 
 Route::GET('/delete','MyPageController@delete');
+
+Route::GET('/hand_store','PorkerController@hand_store');
