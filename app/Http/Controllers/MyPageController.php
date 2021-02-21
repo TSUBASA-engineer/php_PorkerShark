@@ -9,6 +9,7 @@ class MyPageController extends Controller
 {
     public function my_page(){
         $name = \Session::get('name', '失敗');
+        $email = \Session::get('email','失敗');
         return view('mypage')->with('name',$name);
     }
 

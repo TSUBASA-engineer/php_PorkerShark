@@ -12,4 +12,9 @@ class PorkerController extends Controller
         
         return view('hand_store')->with('name',$name);
     }
+
+    public function hand_put(Request $request){
+        $input = $request->all();
+        dd($input);
+    }
 }

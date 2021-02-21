@@ -57,8 +57,13 @@ class StoreController extends Controller
 
             $value = User::where('email','=', $data['email'])->get('name');
             $name = $value[0]['name'];
+            $input =[
+                'name' => $name,
+                'email' => $email
+            ];
             
-            \Session::put('name', $name);
+            $this->session_register($input);
+
 
             return view('mypage')->with('name',$name);
 
@@ -75,5 +80,11 @@ class StoreController extends Controller
         } else {
             return true;
         }
+    }
+
+    public function session_register($input){
+
+        \Session::put('name', $input['name']);
+        \Session::put('email', $input['email']);
     }
 } 
