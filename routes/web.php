@@ -35,3 +35,9 @@ Route::GET('/delete','MyPageController@delete');
 
 Route::GET('/hand_store','PorkerController@hand_store');
 
+Route::GET('/hand_put','PorkerController@hand_put');
+
+Route::GET('/hand_store_reload','PorkerController@hand_store_reload');
+
+Route::GET('/hand_prevew','HandprevewController@hand_prevew');
+

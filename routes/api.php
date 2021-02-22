@@ -18,5 +18,3 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-// 登録
-Route::POST('/hand_put','PorkerController@hand_put');

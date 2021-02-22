@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePorekersTable extends Migration
+class CreatePorkersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreatePorekersTable extends Migration
      */
     public function up()
     {
-        Schema::create('porekers', function (Blueprint $table) {
+        Schema::create('porkers', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->string('first_hand');
-            $table->string('second_hand');
+            $table->string('f_suit');
+            $table->string('f_number');
+            $table->string('s_suit');
+            $table->string('s_number');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreatePorekersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('porekers');
+        Schema::dropIfExists('porkers');
     }
 }

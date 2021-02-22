@@ -8,7 +8,12 @@
     background-color: rgba(0, 0, 0, .85);
 }
 
+h1{
+    font-weight: bold;
+}
+
 .form_wrapper{
+    width: 500px;
     padding-top: 50px;
     margin-top: 100px;
 }
@@ -32,25 +37,3 @@
     color: #000;
     border: 1px solid #000;
 }
-
-.btn_wrapper{
-    text-align: center;
-}
-
-.btn_store{
-    background-color: #000;
-    border: #fff;
-    border: 1px solid #fff;
-}
-
-.btn_store:hover{
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-}
-
-/* .comment{
-    float: left;
-} */
-
-

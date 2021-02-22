@@ -64,9 +64,12 @@ class StoreController extends Controller
             
             $this->session_register($input);
 
+            $count = 0;
 
-            return view('mypage')->with('name',$name);
-
+            return view('mypage')->with([
+                    'count' => $count,
+                    'name' => $name
+                    ]);
         }
     }
 

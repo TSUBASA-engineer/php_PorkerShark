@@ -13,13 +13,16 @@
         <div class="container clearfix d-frex-colm flex-md-row text-center">
             <a href="#"><img  class="logo" src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
             <form action="/delete" method="GET">
-                <button type="submit" class="btn btn-primary" id="btn_delete">アカウント削除</button>
+                <button type="submit" class="btn btn-primary" id="btn_delete" style="margin-left: 40px;">アカウント削除</button>
             </form>
             <form action="/" method="GET">
                 <button type="submit" class="btn btn-primary" id="btn_logout">ログアウト</button>
             </form>
             <form action="/hand_store" method="GET">
                 <button type="submit" class="btn btn-primary">ハンド登録</button>
+            </form>
+            <form action="/hand_prevew" method="GET">
+                <button type="submit" class="btn btn-primary">ハンド履歴</button>
             </form>
         </div>
     </nav>
@@ -32,6 +35,13 @@
         <p class="lead font-weight-nomar">さあこれから戦いに挑もう！</p>
     </div>
 
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
+    
+        <h1>これまでのVPIP：{{$count}}％</h1>
+        <h2>    通算ハンド：{{$all_count}}</h2>
+        <h2>    参加ハンド：{{$all_join}}</h2>
+        <p>※VPIPとはブラインド（BB・SB）以外で自主的なポットへの参加率</p>
+    </div>
     <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
 
 <script>
