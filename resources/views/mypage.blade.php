@@ -9,23 +9,6 @@
     <title>マイページ</title>
 </head>
 <body>
-        <!-- <nav class="site-header sticky-top py-1">
-            <div class="container clearfix d-frex-colm flex-md-row text-center">
-                <a href="#"><img  class="logo" src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
-                <form action="/delete" method="GET">
-                    <button type="submit" class="btn btn-primary" id="btn_delete" style="margin-left: 40px;">アカウント削除</button>
-                </form>
-                <form action="/" method="GET">
-                    <button type="submit" class="btn btn-primary" id="btn_logout">ログアウト</button>
-                </form>
-                <form action="/hand_store" method="GET">
-                    <button type="submit" class="btn btn-primary">ハンド登録</button>
-                </form>
-                <form action="/hand_prevew" method="GET">
-                    <button type="submit" class="btn btn-primary">ハンド履歴</button>
-                </form>
-            </div>
-        </nav> -->
     <nav class="site-header sticky-top py-1">
         <div class="container clearfix d-frex-colm flex-md-row text-center">
             <a href="my_page"><img  class="logo" src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
