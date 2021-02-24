@@ -12,7 +12,7 @@
     <title>ハンド登録</title>
 </head>
 <body>
-<nav class="site-header sticky-top py-1">
+    <nav class="site-header sticky-top py-1">
         <div class="container clearfix d-frex-colm flex-md-row text-center">
             <a href="my_page"><img  class="logo" src="{{asset('/images/logo.png')}}" alt="ロゴ" style="widht: 70px; height: 70px;"></a>
             <form action="/my_page" method="GET">

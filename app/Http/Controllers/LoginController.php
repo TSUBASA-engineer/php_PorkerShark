@@ -60,7 +60,12 @@ class LoginController extends Controller
             $all_count = $this->join_count($all_hands);
             $all_join = $this->join_count($join_hands);
 
-            $count = round($all_join / $all_count,2)*100;
+            if($all_join != 0){
+                $count = round($all_join / $all_count,2)*100;
+            } else {
+                $count = 0;
+                $all_join = 0;
+            }
 
             return view('mypage')->with([
                 "count" => $count,
