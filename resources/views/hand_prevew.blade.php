@@ -34,11 +34,9 @@
     <table class="mx-auto">
         <tr>
             <td>
-                @foreach($f_card as $card)
-                    <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
-                @endforeach
-                @foreach($s_card as $card)
-                    <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
+                @foreach($card as $value)
+                    <img src= "{{asset(sprintf('/images/cards/%s.png',$value[0])) }}" style="widht: 100px; height: 100px;">
+                    <img src= "{{asset(sprintf('/images/cards/%s.png',$value[1])) }}" style="widht: 100px; height: 100px;">
                 @endforeach
             </td>
         </tr>
