@@ -29,17 +29,17 @@
     
     <div class="form_wrapper clearfix d-frex-colm flex-md-row  border">
             <div class="comment">
-            <p class="text-center">ティルト（感情的）になるのを防ぐためにあえてボタンを小さくしてます！</p>
-            <p class="text-center">参加しない時・ブラインド（SB・BB）では何も入力せずハンド登録を押してください。</p>
-            @if(session('commit')) 
-            <p class="text-danger d-flex align-items-center justify-content-center">
-            {{session('commit')}}
-            </p>  
-            @endif 
+                <p class="text-center">ティルト（感情的）になるのを防ぐためにあえてボタンを小さくしてます！</p>
+                <p class="text-center">参加しない時・ブラインド（SB・BB）では何も入力せずハンド登録を押してください。</p>
+                @if(session('commit')) 
+                <p class="text-danger d-flex align-items-center justify-content-center">
+                {{session('commit')}}
+                </p>  
+                @endif 
+                <div class="preview" style="text-align: center; padding-bottom: 15px; contant: ''; "></div>
             </div>
             <form action="/hand_put" method="GET">
             <table class="mx-auto">
-            <div class="preview"></div>
                 <tr>
                     @for ($i = 1; $i <= 13; $i++)
                     <td>
@@ -120,7 +120,7 @@ $('input[type=checkbox]').click(function () {
             var id = $(this).attr('id');
             console.log(id)
             $('.preview').append(
-             '<img style="width:80px; height: 80px;" src=images/cards/'+ id + '.png>'
+             '<img style="width:80px; height: 80px; " src=images/cards/'+ id + '.png>'
             )
         });
 

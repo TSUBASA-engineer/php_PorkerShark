@@ -23,27 +23,28 @@
             </form>
         </div>
     </nav>
-
-        @if(session('err_msg')) 
-            <p class="text-danger d-flex align-items-center justify-content-center">
-        {{session('err_msg')}}
-            </p>  
-        @endif 
-
-        @foreach($f_card as $card)
-            <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
-        @endforeach
-
-        <br>
-
-        @for($count = 1; $count <= $card; $count++)
-            @foreach($s_card as $card)
-                <p>{{$count}}回目のハンド</p>
+        <!-- <div class = "hand_container">
+            @foreach($f_card as $card)
                 <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
             @endforeach
-        @endfor
+            @foreach($s_card as $card)
+                <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
+            @endforeach
+        </div> -->
+    <table class="mx-auto">
+        <tr>
+            <td>
+                @foreach($f_card as $card)
+                    <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
+                @endforeach
+                @foreach($s_card as $card)
+                    <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
+                @endforeach
+            </td>
+        </tr>
+    </table>
 
-    <footer class="container text-center overflow-hidden">©︎2021 Animus></footer>
+    <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
 
 </body>
 </html>

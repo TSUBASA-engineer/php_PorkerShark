@@ -16,8 +16,18 @@ class HandprevewController extends Controller
 
         if ($db_check === false){
 
+           $count =  0;
+           $all_join = 0;
+           $all_count = 0;
+
             \Session::flash('err_msg','まだハンドが登録されていません');
-            return view('hand_prevew');
+
+            return view('mypage',)->with([
+                "name" => $name,
+                "count" => $count,
+                "all_join" => $all_join,
+                "all_count" => $all_count
+            ]);
         }
 
         $data = Porker::where('email', '=', $email)->get();
@@ -43,9 +53,17 @@ class HandprevewController extends Controller
 
         $count = count($f_card);
 
-        dd($count);
+        $array_count = count($f_card);
+
+       $card = array();
+
+       for($i = 0; $i < $array_count; $i++){
+           $card[$i] = array($f_card[$i],$s_card[$i]);
+       }
+        dd($card);
+
         
-        return view('hand_prevew',compact('f_card','s_card','count'));
+        return view('hand_prevew',compact('card','count'));
     }
 
     public function email_check($email){

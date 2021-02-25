@@ -28,6 +28,11 @@
     </nav>
 
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md3 text-center bg-light">
+        @if(session('err_msg'))
+            <p class="text-danger d-flex align-items-center justify-content-center">
+        {{session('err_msg')}}
+            </p>  
+        @endif 
             <p class="d-flex align-items-center justify-content-center">
                 ログイン：{{$name}}
             </p>
@@ -39,11 +44,8 @@
                 <p>※VPIPとはブラインド（BB・SB）以外で自主的なポットへの参加率</p>
         </div>
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="footer_container">
-            <span class="text-muted"> ©︎2021 Animus</span>
-        </div>
-    </footer>
+        <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
+
 
 <script>
     document.getElementById("btn_logout").onclick =　function(){

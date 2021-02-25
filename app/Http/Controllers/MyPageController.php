@@ -25,7 +25,6 @@ class MyPageController extends Controller
                 $count = 0;
             }
             
-
             return view('mypage')->with([
                 "count" => $count,
                 "name" => $name,
