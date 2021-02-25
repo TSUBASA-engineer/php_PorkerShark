@@ -23,24 +23,23 @@
             </form>
         </div>
     </nav>
-        <!-- <div class = "hand_container">
-            @foreach($f_card as $card)
-                <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
-            @endforeach
-            @foreach($s_card as $card)
-                <img src= "{{asset(sprintf('/images/cards/%s.png',$card)) }}" style="widht: 100px; height: 100px;">
-            @endforeach
-        </div> -->
-    <table class="mx-auto">
-        <tr>
-            <td>
-                @foreach($card as $value)
-                    <img src= "{{asset(sprintf('/images/cards/%s.png',$value[0])) }}" style="widht: 100px; height: 100px;">
-                    <img src= "{{asset(sprintf('/images/cards/%s.png',$value[1])) }}" style="widht: 100px; height: 100px;">
+    <div class="hand_view">
+        <table class="mx-auto">
+                @foreach($card as $key => $value)
+                <tr>
+                    <td>
+                        <p>{{$key + 1}}ハンド目</p>
+                        <img src= "{{asset(sprintf('/images/cards/%s.png',$value[0])) }}" style="widht: 100px; height: 100px;">
+                        <img src= "{{asset(sprintf('/images/cards/%s.png',$value[1])) }}" style="widht: 100px; height: 100px;">
+                    </td>
+                </tr>
                 @endforeach
-            </td>
-        </tr>
-    </table>
+        </table>
+    </div>
+
+    <div class="hand_range">
+
+    </div>
 
     <footer class="container text-center overflow-hidden">©︎2021 Animus</footer>
 

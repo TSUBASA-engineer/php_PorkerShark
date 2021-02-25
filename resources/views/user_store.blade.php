@@ -35,7 +35,7 @@
                 <input type="email" class="form-control" name="Input_Email" id="Input_Email"  placeholder="メールアドレスを入力してください">
             </div>
             <div class="form-group">
-                <label for="InputPassword">Password</label>
+                <label for="InputPassword">パスワード</label>
                 <input type="password" class="form-control" name="InputPassword" id="exampleInputPassword1" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary" id="btn_check">送信</button>

@@ -61,7 +61,6 @@ class HandprevewController extends Controller
            $card[$i] = array($f_card[$i],$s_card[$i]);
        }
 
-        
         return view('hand_prevew',compact('card','count'));
     }
 
